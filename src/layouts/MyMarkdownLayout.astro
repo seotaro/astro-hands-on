@@ -1,0 +1,10 @@
+---
+import Footer from "../components/Footer.astro";
+const { frontmatter } = Astro.props;
+---
+
+<meta charset="utf-8" />
+<h1>{frontmatter.title}</h1>
+<p>著者: {frontmatter.author}（{frontmatter.pubDate}に投稿）</p>
+<slot />
+<Footer />
