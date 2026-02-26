@@ -1,7 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Greeting from "../components/Greeting.jsx";
 ---
 
 <BaseLayout pageTitle={"Home Page"}>
   <h2>my awesome blog sub title</h2>
+  <Greeting
+    client:load
+    messages={["こんにちは", "おはようございます", "こんばんは"]}
+  />
 </BaseLayout>
