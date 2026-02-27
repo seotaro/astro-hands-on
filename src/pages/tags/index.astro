@@ -11,32 +11,12 @@ const tags = [
 ];
 ---
 
-<style>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
-    background-color: #f8fcfd;
-  }
-</style>
-
 <BaseLayout pageTitle={"タグインデックス"}>
-  <div class="tags">
+  <div class="flex flex-wrap">
     {
       tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
+        <p class="m-1 border border-dotted border-[#a1a1a1] rounded-lg px-4 py-2 text-lg bg-[#f8fcfd]">
+          <a href={`/tags/${tag}`} class="text-[#00539f]">{tag}</a>
         </p>
       ))
     }
